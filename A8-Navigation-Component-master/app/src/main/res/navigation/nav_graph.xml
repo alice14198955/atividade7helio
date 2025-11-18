@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.lanchoneteapp.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_detalheFragment"
+            app:destination="@id/detalheFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detalheFragment"
+        android:name="com.example.lanchoneteapp.DetalheFragment"
+        android:label="Detalhe"
+        tools:layout="@layout/fragment_detalhe">
+        <argument
+            android:name="lancheNome"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.example.lanchoneteapp.PerfilFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_perfil" />
+</navigation>
